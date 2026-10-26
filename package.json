@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "test:live": "node scripts/verify-live.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -42,5 +44,8 @@
   "trustedDependencies": [
     "sharp",
     "unrs-resolver"
-  ]
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  }
 }

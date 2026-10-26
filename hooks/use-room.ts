@@ -24,7 +24,7 @@ export function useRoom(code: string, host: boolean) {
     const abort = new AbortController();
     async function load() {
       try {
-        const response = await fetch(`/api/game?code=${code}`, { headers: { Authorization: `Bearer ${token.current}` }, cache: "no-store", signal: abort.signal });
+        const response = await fetch(`/api/game?code=${code}`, { headers: { Authorization: `Bearer ${token.current}` }, cache: "no-store", signal: AbortSignal.any([abort.signal, AbortSignal.timeout(8000)]) });
         const data = await response.json();
         if (!alive) return;
         if (!response.ok) {

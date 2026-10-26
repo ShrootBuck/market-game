@@ -31,7 +31,6 @@ button, a, input, select { touch-action:manipulation; }
 .brand-icon { display:grid; place-items:center; width:35px; height:35px; background:var(--primary); color:white; border-radius:10px; }
 .brand-period { color:var(--primary); margin-left:-8px; }
 .site-header nav { display:flex; align-items:center; gap:15px; }
-.header-pill { display:flex; align-items:center; gap:7px; border:1px solid var(--border); border-radius:999px; padding:7px 12px; font-size:11px; font-weight:500; color:var(--muted-foreground); }
 .hero { display:grid; grid-template-columns:1.35fr 1fr; gap:72px; padding:76px 0 58px; align-items:center; }
 .hero-copy { padding:8px 0 24px; }
 .live-label { display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:650; letter-spacing:1.3px; text-transform:uppercase; }
@@ -50,15 +49,11 @@ button, a, input, select { touch-action:manipulation; }
 .entry-card h2 { font-size:27px; font-weight:650; letter-spacing:-1px; margin-bottom:5px; }
 .entry-card > p { font-size:13px; color:var(--muted-foreground); margin-bottom:24px; }
 .entry-card form { display:flex; flex-direction:column; gap:8px; }
-.entry-card label { font-size:12px; font-weight:550; margin-top:8px; }
 .primary-cta { width:100%; margin-top:14px; justify-content:space-between; }
 .host-cta { width:100%; }
 .host-cta svg:last-child { margin-left:auto; }
-.entry-divider { display:flex; align-items:center; justify-content:center; gap:12px; font-size:11px; color:var(--muted-foreground); margin:22px 0 16px; }
-.entry-divider:before,.entry-divider:after { content:""; flex:1; height:1px; background:var(--border); }
+.entry-divider { display:flex; align-items:center; justify-content:center; gap:12px; font-size:11px; color:var(--muted-foreground); margin:22px 0 16px; white-space:nowrap; }
 .host-dialog { max-width:min(460px,calc(100% - 32px))!important; padding:28px; gap:16px; }
-.host-dialog select { border:1px solid var(--input); border-radius:8px; height:44px; background:var(--card); padding:0 12px; width:100%; }
-.host-dialog label { font-size:12px; font-weight:550; }
 .form-error { font-size:12px; color:var(--destructive); }
 .small { font-size:12px; line-height:1.65; }
 .muted { color:var(--muted-foreground); }
@@ -66,7 +61,6 @@ button, a, input, select { touch-action:manipulation; }
 .floor-preview { background:var(--card); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
 .preview-top { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:23px 28px; border-bottom:1px solid var(--border); }
 .preview-top h2 { font-size:19px; font-weight:550; letter-spacing:-.55px; margin-top:5px; }
-.sample-badge { display:inline-block; flex-shrink:0; font-size:10px; padding:5px 9px; border:1px solid var(--border); border-radius:6px; color:var(--muted-foreground); }
 .preview-body { display:grid; grid-template-columns:1.8fr 1fr; }
 .preview-chart { padding:28px 24px 10px; min-width:0; }
 .quote-heading { display:flex; align-items:center; gap:12px; padding-left:15px; }

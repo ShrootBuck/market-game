@@ -77,7 +77,7 @@ function finish(room: Room) {
     }
   }
   room.phase = "results"; room.orders = []; room.pausedAt = null;
-  room.history.push({ round: room.round, trades: room.trades.length, average: room.trades.length ? room.trades.reduce((s, t) => s + t.price, 0) / room.trades.length : null, equilibrium: room.round === 2 ? 60 : equilibrium(room).price, scores: room.players.map(p => ({ id: p.id, name: p.name, score: p.roundScore })) });
+  room.history.push({ round: room.round, trades: room.trades.length, average: room.trades.length ? room.trades.reduce((s, t) => s + t.price, 0) / room.trades.length : null, equilibrium: room.round === 2 ? room.fundamental : equilibrium(room).price, scores: room.players.map(p => ({ id: p.id, name: p.name, score: p.roundScore })) });
 }
 
 function shock(room: Room, now: number) {
